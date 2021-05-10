@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.0.3
+-- version 5.1.0
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 04, 2021 at 06:14 AM
--- Server version: 10.4.14-MariaDB
--- PHP Version: 7.4.11
+-- Generation Time: May 10, 2021 at 01:08 PM
+-- Server version: 10.4.18-MariaDB
+-- PHP Version: 8.0.3
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -31,9 +31,16 @@ CREATE TABLE `admin` (
   `admin_id` int(11) NOT NULL,
   `user_name` varchar(255) NOT NULL,
   `password` varchar(255) NOT NULL,
-  `mobile_no` int(10) NOT NULL,
+  `mobile_no` bigint(10) NOT NULL,
   `email` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `admin`
+--
+
+INSERT INTO `admin` (`admin_id`, `user_name`, `password`, `mobile_no`, `email`) VALUES
+(1, 'admin', 'admin', 8095463662, 'admin@gmail.com');
 
 -- --------------------------------------------------------
 
@@ -58,12 +65,20 @@ CREATE TABLE `bills` (
 
 CREATE TABLE `customers` (
   `customer_id` int(11) NOT NULL,
-  `user_name` varchar(255) NOT NULL,
+  `name` varchar(255) NOT NULL,
   `address` varchar(255) NOT NULL,
-  `mobile_no` int(10) NOT NULL,
+  `mobile_no` bigint(10) NOT NULL,
   `password` varchar(255) NOT NULL,
   `email` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `customers`
+--
+
+INSERT INTO `customers` (`customer_id`, `name`, `address`, `mobile_no`, `password`, `email`) VALUES
+(1, 'Ravi', 'Basistha Chariali', 8095873663, 'secret1', 'ravi@gmail.com'),
+(2, 'zyandeep', 'Beltola', 8095873663, 'secret1', 'zyan@gmail.com');
 
 -- --------------------------------------------------------
 
@@ -78,6 +93,23 @@ CREATE TABLE `items` (
   `price` int(11) NOT NULL,
   `image_path` varchar(500) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `items`
+--
+
+INSERT INTO `items` (`item_id`, `name`, `category`, `price`, `image_path`) VALUES
+(1, 'veg-chowmein', 'VEG', 75, 'storage/items/veg'),
+(2, 'veg-kebab', 'VEG', 100, 'storage/items/veg'),
+(3, 'veg-paneer-tikka', 'VEG', 120, 'storage/items/veg'),
+(4, 'veg-roll', 'VEG', 80, 'storage/items/veg'),
+(5, 'chicken-biryani', 'NON_VEG', 150, 'storage/items/nonveg'),
+(6, 'chicken-momos', 'NON_VEG', 120, 'storage/items/nonveg'),
+(7, 'chicken-roll', 'NON_VEG', 100, 'storage/items/nonveg'),
+(8, 'chicken-wings', 'NON_VEG', 100, 'storage/items/nonveg'),
+(9, 'beve-coke', 'BEVERAGE', 50, 'storage/items/beverage'),
+(11, 'beve-thumsup', 'BEVERAGE', 45, 'storage/items/beverage'),
+(12, 'mineral-water', 'BEVERAGE', 20, 'storage/items/beverage');
 
 -- --------------------------------------------------------
 
@@ -141,7 +173,7 @@ ALTER TABLE `orders`
 -- AUTO_INCREMENT for table `admin`
 --
 ALTER TABLE `admin`
-  MODIFY `admin_id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `admin_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `bills`
@@ -153,7 +185,7 @@ ALTER TABLE `bills`
 -- AUTO_INCREMENT for table `customers`
 --
 ALTER TABLE `customers`
-  MODIFY `customer_id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `customer_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `items`
@@ -165,7 +197,7 @@ ALTER TABLE `items`
 -- AUTO_INCREMENT for table `orders`
 --
 ALTER TABLE `orders`
-  MODIFY `order_id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `order_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- Constraints for dumped tables
