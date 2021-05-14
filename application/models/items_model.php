@@ -23,7 +23,7 @@ class Items_model extends CI_Model {
         return $query->result();
     }
     //GET BEVERAGE
-    public function get_items() {
+    public function get_bev_items() {
     	$this->db->select('*');
 		$this->db->from('items');
 		$this->db->where("category","BEVERAGE");
