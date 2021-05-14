@@ -26,7 +26,6 @@
 <body>
 
 <div class="container">
-  <h2>FoodPark</h2>  
   <div id="myCarousel" class="carousel slide" data-ride="carousel">
     <!-- Indicators -->
     <ol class="carousel-indicators">
@@ -38,15 +37,15 @@
     <!-- Wrapper for slides -->
     <div class="carousel-inner">
       <div class="item active">
-        <img src="<?= base_url('assets/img/food/767033.jpg') ?>" alt="Los Angeles" style="width:100%; height:400px">
+        <img src="<?= base_url('storage/banner/banner_1.png') ?>" alt="1" style="width:100%; height:400px">
       </div>
 
       <div class="item">
-        <img src="<?= base_url('assets/img/food/pexels-photo-1092730.jpeg') ?>" alt="Chicago" style="width:100%;height:400px">
+        <img src="<?= base_url('storage/banner/banner_2.png') ?>" alt="2" style="width:100%;height:400px">
       </div>
     
       <div class="item">
-        <img src="<?= base_url('assets/img/food/food_steak_wine_dessert_Sea_food-65559.jpg') ?>" alt="New york" style="width:100%;height:400px">
+        <img src="<?= base_url('storage/banner/banner_4.png') ?>" alt="3" style="width:100%;height:400px">
       </div>
     </div>
 
