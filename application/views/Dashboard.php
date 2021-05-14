@@ -38,15 +38,15 @@
     <!-- Wrapper for slides -->
     <div class="carousel-inner">
       <div class="item active">
-        <img src="<?= base_url('assets/img/chicken.jpg') ?>" alt="Los Angeles" style="width:100%; height:300px">
+        <img src="<?= base_url('assets/img/food/767033.jpg') ?>" alt="Los Angeles" style="width:100%; height:400px">
       </div>
 
       <div class="item">
-        <img src="<?= base_url('assets/img/fastfood.jpg') ?>" alt="Chicago" style="width:100%;height:300px">
+        <img src="<?= base_url('assets/img/food/pexels-photo-1092730.jpeg') ?>" alt="Chicago" style="width:100%;height:400px">
       </div>
     
       <div class="item">
-        <img src="<?= base_url('assets/img/collection.jpg') ?>" alt="New york" style="width:100%;height:300px">
+        <img src="<?= base_url('assets/img/food/food_steak_wine_dessert_Sea_food-65559.jpg') ?>" alt="New york" style="width:100%;height:400px">
       </div>
     </div>
 
@@ -91,31 +91,31 @@
 			<div class="row">
 				<div class="card col-md-4">
 					<img class="card-img-top" src=
-"https://media.geeksforgeeks.org/wp-content/cdn-uploads/20190710102234/download3.png">
+"<?= base_url('assets/img/food/photo-1514537099923-4c0fc7c73161.jpg') ?>" style="width:300px;height:300px">
 
 					<div class="card-body">
-						<h3 class="card-title">Compare</h3>
-						<p class="card-text">JavaScript | Python</p>
+						<h3 class="card-title">Salad</h3>
+						<p class="card-text">Healthy Brocoli Salad</p>
 					</div>
 				</div>
 
 				<div class="card col-md-4">
 					<img class="card-img-top" src=
-"https://media.geeksforgeeks.org/wp-content/cdn-uploads/20190710102234/download3.png">
+"<?= base_url('assets/img/food/photo-1540189549336-e6e99c3679fe.jpg') ?>" style="width:300px;height:300px">
 					
 					<div class="card-body">
-						<h3 class="card-title text-primary">Placement</h3>
-						<p class="card-text">Sudo Placement Course</p>
+						<h3 class="card-title">Juice and Exotic Salad</h3>
+						<p class="card-text">A great combination of orange juice and salad</p>
 					</div>
 				</div>
 				
 				<div class="card col-md-4">
 					<img class="card-img-top" src=
-"https://media.geeksforgeeks.org/wp-content/cdn-uploads/20190710102234/download3.png">
+"<?= base_url('assets/img/food/wp4987405.jpg') ?>" style="width:300px;height:300px">
 					
 					<div class="card-body">
-						<h3 class="card-title">DSA</h3>
-						<p class="card-text">DS & Algo Course</p>
+						<h3 class="card-title">Paneer</h3>
+						<p class="card-text">Shahi Paneer, the Royal food</p>
 					</div>
 				</div>
 			</div>
@@ -133,32 +133,29 @@
 			<!--bootstrap card with 3 horizontal images-->
 			<div class="row">
 				<div class="card col-md-4">
-					<img class="card-img-top" src=
-"https://media.geeksforgeeks.org/wp-content/cdn-uploads/20190710102234/download3.png">
+					<img class="card-img-top" src="<?= base_url('assets/img/food/pexels-photo-5835353.jpeg') ?>" style="width:300px;height:300px">
 
 					<div class="card-body">
-						<h3 class="card-title">Compare</h3>
-						<p class="card-text">JavaScript | Python</p>
+						<h3 class="card-title">Chicken Thali</h3>
+						<p class="card-text">Simple Indian Chicken with arromatic Basmati Rice </p>
 					</div>
 				</div>
 
 				<div class="card col-md-4">
-					<img class="card-img-top" src=
-"https://media.geeksforgeeks.org/wp-content/cdn-uploads/20190710102234/download3.png">
+					<img class="card-img-top" src="<?= base_url('assets/img/food/photo-1482049016688-2d3e1b311543.jpg') ?>" style="width:300px;height:300px">
 					
 					<div class="card-body">
-						<h3 class="card-title text-primary">Placement</h3>
-						<p class="card-text">Sudo Placement Course</p>
+						<h3 class="card-title">Egg Boil and Toast</h3>
+						<p class="card-text">Boiled egg with toast in english style for breakfast</p>
 					</div>
 				</div>
 				
 				<div class="card col-md-4">
-					<img class="card-img-top" src=
-"https://media.geeksforgeeks.org/wp-content/cdn-uploads/20190710102234/download3.png">
+					<img class="card-img-top" src="<?= base_url('assets/img/food/pexels-photo-1624487.jpeg') ?>" style="width:300px;height:300px">
 					
 					<div class="card-body">
-						<h3 class="card-title">DSA</h3>
-						<p class="card-text">DS & Algo Course</p>
+						<h3 class="card-title">Biriyani</h3>
+						<p class="card-text">Do we need to describe Biriyani?</p>
 					</div>
 				</div>
 			</div>
@@ -175,32 +172,29 @@
 			<!--bootstrap card with 3 horizontal images-->
 			<div class="row">
 				<div class="card col-md-4">
-					<img class="card-img-top" src=
-"https://media.geeksforgeeks.org/wp-content/cdn-uploads/20190710102234/download3.png">
+					<img class="card-img-top" src="<?= base_url('assets/img/food/photo-1616606473122-c3301f07bfb1.jpg') ?>" style="width:300px;height:300px">
 
 					<div class="card-body">
-						<h3 class="card-title">Compare</h3>
-						<p class="card-text">JavaScript | Python</p>
+						<h3 class="card-title">Pineapple Juice</h3>
+						<p class="card-text">Pineapple juice with Soda</p>
 					</div>
 				</div>
 
 				<div class="card col-md-4">
-					<img class="card-img-top" src=
-"https://media.geeksforgeeks.org/wp-content/cdn-uploads/20190710102234/download3.png">
+					<img class="card-img-top" src="<?= base_url('assets/img/food/photo-1565958011703-44f9829ba187.jpg') ?>" style="width:300px;height:300px">
 					
 					<div class="card-body">
-						<h3 class="card-title text-primary">Placement</h3>
-						<p class="card-text">Sudo Placement Course</p>
+						<h3 class="card-title">Pastry</h3>
+						<p class="card-text">Delicious Cheese Strawberry Pastry</p>
 					</div>
 				</div>
 				
 				<div class="card col-md-4">
-					<img class="card-img-top" src=
-"https://media.geeksforgeeks.org/wp-content/cdn-uploads/20190710102234/download3.png">
+					<img class="card-img-top" src="<?= base_url('assets/img/food/photo-1617524455443-e2c807d80d29.jpg') ?>" style="width:300px;height:300px">
 					
 					<div class="card-body">
-						<h3 class="card-title">DSA</h3>
-						<p class="card-text">DS & Algo Course</p>
+						<h3 class="card-title">Lemonade</h3>
+						<p class="card-text">La La Lemony Lemon juice</p>
 					</div>
 				</div>
 			</div>
