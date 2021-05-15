@@ -14,10 +14,12 @@ class Dashboard extends CI_Controller
     public function index()
     {
         $this->load->model('items_model');
-        $data['items'] = $this->items_model->get_items();
-       // $this->load->model('dashboard_mod');
+        $data['vegs'] = $this->items_model->get_veg_items();
+        $data['non_vegs'] = $this->items_model->get_nonveg_items();
+        $data['brevs'] = $this->items_model->get_bev_items();
+        
         $this->load->view('includes/header');
-        $this->load->view('Dashboard');
+        $this->load->view('Dashboard',$data);
        // $this->load->view('includes/footer');
     }
 
