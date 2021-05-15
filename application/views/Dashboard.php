@@ -129,8 +129,9 @@
 			</div>
 		</div>
 	</div>
-  <h1><a href="<?= base_url('menu')?>" class="card-link">View more</a></h1>
-
+  <div style="text-align: center;">	
+  <h3><a href="<?= base_url('menu')?>" class="card-link">View more</a></h3>
+  </div>
 <h2 style="color:green;text-align:center;">
 		Non-Vegetarian
 	</h2>
@@ -140,6 +141,7 @@
 
 			<!--bootstrap card with 3 horizontal images-->
 			<div class="row">
+
 				<div class="card col-md-3">
 					<img class="card-img-top" src="<?= base_url('assets/img/food/pexels-photo-5835353.jpeg') ?>" style="width:280px;height:250px">
 
@@ -177,7 +179,9 @@
 			</div>
 		</div>
 	</div>
-  <h1><a href="<?= base_url('menu')?>" class="card-link">View more</a></h1>
+	<div style="text-align: center;">
+    <h3><a href="<?= base_url('menu')?>" class="card-link">View more</a></h3>
+    </div >
 <h2 style="color:green;text-align:center;">
 		Beverages
 	</h2>
@@ -224,7 +228,8 @@
 			</div>
 		</div>
 	</div>
-  <h1><a href="<?= base_url('menu')?>" class="card-link">View more</a></h1>
-
+	<div style="text-align: center;">
+    <h3><a href="<?= base_url('menu')?>" class="card-link">View more</a></h3>
+    </div>
 </body>
 </html>
