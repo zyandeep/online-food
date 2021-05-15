@@ -79,18 +79,18 @@
   
 </div> -->
 
-<h1 style="color:green;text-align:center;">
+<h2 style="color:green;text-align:center;">
 		Vegetarian
-	</h1>
+	</h2>
 
 	<div class="container">
 		<div class="card-group">
 
 			<!--bootstrap card with 3 horizontal images-->
 			<div class="row">
-				<div class="card col-md-4">
+				<div class="card col-md-3">
 					<img class="card-img-top" src=
-"<?= base_url('assets/img/food/photo-1514537099923-4c0fc7c73161.jpg') ?>" style="width:300px;height:300px">
+"<?= base_url('assets/img/food/photo-1514537099923-4c0fc7c73161.jpg') ?>" style="width:280px;height:250px">
 
 					<div class="card-body">
 						<h3 class="card-title">Salad</h3>
@@ -98,9 +98,9 @@
 					</div>
 				</div>
 
-				<div class="card col-md-4">
+				<div class="card col-md-3">
 					<img class="card-img-top" src=
-"<?= base_url('assets/img/food/photo-1540189549336-e6e99c3679fe.jpg') ?>" style="width:300px;height:300px">
+"<?= base_url('assets/img/food/photo-1540189549336-e6e99c3679fe.jpg') ?>" style="width:280px;height:250px">
 					
 					<div class="card-body">
 						<h3 class="card-title">Juice and Exotic Salad</h3>
@@ -108,13 +108,22 @@
 					</div>
 				</div>
 				
-				<div class="card col-md-4">
+				<div class="card col-md-3">
 					<img class="card-img-top" src=
-"<?= base_url('assets/img/food/wp4987405.jpg') ?>" style="width:300px;height:300px">
+"<?= base_url('assets/img/food/wp4987405.jpg') ?>" style="width:280px;height:250px">
 					
 					<div class="card-body">
 						<h3 class="card-title">Paneer</h3>
 						<p class="card-text">Shahi Paneer, the Royal food</p>
+					</div>
+				</div>
+				<div class="card col-md-3">
+					<img class="card-img-top" src=
+"<?= base_url('assets/img/food/photo-1514537099923-4c0fc7c73161.jpg') ?>" style="width:280px;height:250px">
+
+					<div class="card-body">
+						<h3 class="card-title">Salad</h3>
+						<p class="card-text">Healthy Brocoli Salad</p>
 					</div>
 				</div>
 			</div>
@@ -122,17 +131,17 @@
 	</div>
   <h1><a href="<?= base_url('menu')?>" class="card-link">View more</a></h1>
 
-<h1 style="color:green;text-align:center;">
+<h2 style="color:green;text-align:center;">
 		Non-Vegetarian
-	</h1>
+	</h2>
 
 	<div class="container">
 		<div class="card-group">
 
 			<!--bootstrap card with 3 horizontal images-->
 			<div class="row">
-				<div class="card col-md-4">
-					<img class="card-img-top" src="<?= base_url('assets/img/food/pexels-photo-5835353.jpeg') ?>" style="width:300px;height:300px">
+				<div class="card col-md-3">
+					<img class="card-img-top" src="<?= base_url('assets/img/food/pexels-photo-5835353.jpeg') ?>" style="width:280px;height:250px">
 
 					<div class="card-body">
 						<h3 class="card-title">Chicken Thali</h3>
@@ -140,8 +149,8 @@
 					</div>
 				</div>
 
-				<div class="card col-md-4">
-					<img class="card-img-top" src="<?= base_url('assets/img/food/photo-1482049016688-2d3e1b311543.jpg') ?>" style="width:300px;height:300px">
+				<div class="card col-md-3">
+					<img class="card-img-top" src="<?= base_url('assets/img/food/photo-1482049016688-2d3e1b311543.jpg') ?>" style="width:280px;height:250px">
 					
 					<div class="card-body">
 						<h3 class="card-title">Egg Boil and Toast</h3>
@@ -149,29 +158,37 @@
 					</div>
 				</div>
 				
-				<div class="card col-md-4">
-					<img class="card-img-top" src="<?= base_url('assets/img/food/pexels-photo-1624487.jpeg') ?>" style="width:300px;height:300px">
+				<div class="card col-md-3">
+					<img class="card-img-top" src="<?= base_url('assets/img/food/pexels-photo-1624487.jpeg') ?>" style="width:280px;height:250px">
 					
 					<div class="card-body">
 						<h3 class="card-title">Biriyani</h3>
 						<p class="card-text">Do we need to describe Biriyani?</p>
 					</div>
 				</div>
+				<div class="card col-md-3">
+					<img class="card-img-top" src="<?= base_url('assets/img/food/pexels-photo-5835353.jpeg') ?>" style="width:280px;height:250px">
+
+					<div class="card-body">
+						<h3 class="card-title">Chicken Thali</h3>
+						<p class="card-text">Simple Indian Chicken with arromatic Basmati Rice </p>
+					</div>
+				</div>
 			</div>
 		</div>
 	</div>
   <h1><a href="<?= base_url('menu')?>" class="card-link">View more</a></h1>
-<h1 style="color:green;text-align:center;">
+<h2 style="color:green;text-align:center;">
 		Beverages
-	</h1>
+	</h2>
 
 	<div class="container">
 		<div class="card-group">
 
 			<!--bootstrap card with 3 horizontal images-->
 			<div class="row">
-				<div class="card col-md-4">
-					<img class="card-img-top" src="<?= base_url('assets/img/food/photo-1616606473122-c3301f07bfb1.jpg') ?>" style="width:300px;height:300px">
+				<div class="card col-md-3">
+					<img class="card-img-top" src="<?= base_url('assets/img/food/photo-1616606473122-c3301f07bfb1.jpg') ?>" style="width:280px;height:250px">
 
 					<div class="card-body">
 						<h3 class="card-title">Pineapple Juice</h3>
@@ -179,8 +196,8 @@
 					</div>
 				</div>
 
-				<div class="card col-md-4">
-					<img class="card-img-top" src="<?= base_url('assets/img/food/photo-1565958011703-44f9829ba187.jpg') ?>" style="width:300px;height:300px">
+				<div class="card col-md-3">
+					<img class="card-img-top" src="<?= base_url('assets/img/food/photo-1565958011703-44f9829ba187.jpg') ?>" style="width:280px;height:250px">
 					
 					<div class="card-body">
 						<h3 class="card-title">Pastry</h3>
@@ -188,8 +205,16 @@
 					</div>
 				</div>
 				
-				<div class="card col-md-4">
-					<img class="card-img-top" src="<?= base_url('assets/img/food/photo-1617524455443-e2c807d80d29.jpg') ?>" style="width:300px;height:300px">
+				<div class="card col-md-3">
+					<img class="card-img-top" src="<?= base_url('assets/img/food/photo-1617524455443-e2c807d80d29.jpg') ?>" style="width:280px;height:250px">
+					
+					<div class="card-body">
+						<h3 class="card-title">Lemonade</h3>
+						<p class="card-text">La La Lemony Lemon juice</p>
+					</div>
+				</div>
+				<div class="card col-md-3">
+					<img class="card-img-top" src="<?= base_url('assets/img/food/photo-1617524455443-e2c807d80d29.jpg') ?>" style="width:280px;height:250px">
 					
 					<div class="card-body">
 						<h3 class="card-title">Lemonade</h3>
