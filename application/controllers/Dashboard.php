@@ -21,4 +21,10 @@ class Dashboard extends CI_Controller
        // $this->load->view('includes/footer');
     }
 
+    public function items()
+    {
+        $this->load->model('items_model');
+        
+    }
+
 }

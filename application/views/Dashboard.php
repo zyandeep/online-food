@@ -120,7 +120,7 @@
 			</div>
 		</div>
 	</div>
-  <h1><a href="#" class="card-link">View more</a></h1>
+  <h1><a href="<?= base_url('menu')?>" class="card-link">View more</a></h1>
 
 <h1 style="color:green;text-align:center;">
 		Non-Vegetarian
@@ -160,7 +160,7 @@
 			</div>
 		</div>
 	</div>
-  <h1><a href="#" class="card-link">View more</a></h1>
+  <h1><a href="<?= base_url('menu')?>" class="card-link">View more</a></h1>
 <h1 style="color:green;text-align:center;">
 		Beverages
 	</h1>
@@ -199,7 +199,7 @@
 			</div>
 		</div>
 	</div>
-  <h1><a href="#" class="card-link">View more</a></h1>
+  <h1><a href="<?= base_url('menu')?>" class="card-link">View more</a></h1>
 
 </body>
 </html>

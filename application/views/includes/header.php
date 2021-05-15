@@ -14,7 +14,7 @@
 <nav class="navbar navbar-inverse">
   <div class="container-fluid">
     <div class="navbar-header">
-      <a class="navbar-brand" href="#">Barbeque< Corner/a>
+      <a class="navbar-brand" href="#">Barbeque Corner</a>
     </div>
     <ul class="nav navbar-nav">
       <li class="active"><a href="#">Home</a></li>
@@ -24,9 +24,9 @@
     <ul class="nav navbar-nav navbar-right">
     <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Menu <span class="caret"></span></a>
         <ul class="dropdown-menu">
-          <li><a href="#">Vegetarian</a></li>
-          <li><a href="#">Non-Vegetarian</a></li>
-          <li><a href="#">Beverages</a></li>
+          <li><a href="<?= base_url('menu')?>">Vegetarian</a></li>
+          <li><a href="<?= base_url('menu')?>">Non-Vegetarian</a></li>
+          <li><a href="<?= base_url('menu')?>">Beverages</a></li>
         
         </ul>
       </li>
