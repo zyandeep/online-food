@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 10, 2021 at 01:08 PM
+-- Generation Time: May 16, 2021 at 04:25 PM
 -- Server version: 10.4.18-MariaDB
 -- PHP Version: 8.0.3
 
@@ -91,25 +91,29 @@ CREATE TABLE `items` (
   `name` varchar(255) NOT NULL,
   `category` enum('VEG','NON_VEG','BEVERAGE','') NOT NULL,
   `price` int(11) NOT NULL,
-  `image_path` varchar(500) NOT NULL
+  `image_path` varchar(500) NOT NULL,
+  `rate` int(5) NOT NULL,
+  `description` varchar(256) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `items`
 --
 
-INSERT INTO `items` (`item_id`, `name`, `category`, `price`, `image_path`) VALUES
-(1, 'veg-chowmein', 'VEG', 75, 'storage/items/veg'),
-(2, 'veg-kebab', 'VEG', 100, 'storage/items/veg'),
-(3, 'veg-paneer-tikka', 'VEG', 120, 'storage/items/veg'),
-(4, 'veg-roll', 'VEG', 80, 'storage/items/veg'),
-(5, 'chicken-biryani', 'NON_VEG', 150, 'storage/items/nonveg'),
-(6, 'chicken-momos', 'NON_VEG', 120, 'storage/items/nonveg'),
-(7, 'chicken-roll', 'NON_VEG', 100, 'storage/items/nonveg'),
-(8, 'chicken-wings', 'NON_VEG', 100, 'storage/items/nonveg'),
-(9, 'beve-coke', 'BEVERAGE', 50, 'storage/items/beverage'),
-(11, 'beve-thumsup', 'BEVERAGE', 45, 'storage/items/beverage'),
-(12, 'mineral-water', 'BEVERAGE', 20, 'storage/items/beverage');
+INSERT INTO `items` (`item_id`, `name`, `category`, `price`, `image_path`, `rate`, `description`) VALUES
+(1, 'veg chowmein', 'VEG', 75, 'storage/items/veg', 4, ''),
+(2, 'veg kebab', 'VEG', 100, 'storage/items/veg', 3, ''),
+(3, 'veg paneer tikka', 'VEG', 120, 'storage/items/veg', 3, ''),
+(4, 'veg roll', 'VEG', 80, 'storage/items/veg', 5, ''),
+(5, 'chicken biryani', 'NON_VEG', 150, 'storage/items/nonveg', 2, ''),
+(6, 'chicken momos', 'NON_VEG', 120, 'storage/items/nonveg', 3, ''),
+(7, 'chicken roll', 'NON_VEG', 100, 'storage/items/nonveg', 3, ''),
+(8, 'chicken wings', 'NON_VEG', 100, 'storage/items/nonveg', 2, ''),
+(9, 'coke', 'BEVERAGE', 50, 'storage/items/beverage', 3, ''),
+(10, 'chicken dum biryani', 'NON_VEG', 165, 'storage/items/nonveg', 4, ''),
+(11, 'thumsup', 'BEVERAGE', 45, 'storage/items/beverage', 5, ''),
+(12, 'mineral water', 'BEVERAGE', 20, 'storage/items/beverage', 3, ''),
+(13, 'chicken tikka roll', 'NON_VEG', 50, 'storage/items/nonveg', 4, '');
 
 -- --------------------------------------------------------
 

@@ -7,6 +7,7 @@
   <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script> -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <style>
 		img {
 			max-width: 100%;
@@ -20,8 +21,10 @@
     h1 a{
       margin-left: 30em;
     }
+    .checked {
+    color: green;
+    }
 	</style>
-
 </head>
 <body>
 
@@ -93,8 +96,9 @@
 					<img class="card-img-top" src=
                      "<?= base_url($path) ?>" style="width:280px;height:250px">
 					<div class="card-body">
-						<h3 class="card-title"><?=$veg->name?></h3>
-						<p class="card-text">Rs.<?=$veg->price?></p>
+						<h4 class="card-title"><?=$veg->name?></h4>
+						<p class="card-text">Rs.<?=$veg->price?>&nbsp;&nbsp;&nbsp; <span class="fa fa-star checked"></span><?=$veg->rate?>/5</p>
+						
 					</div>
 				</div>
 		   <?php $x++;?>
@@ -120,8 +124,9 @@
 					<img class="card-img-top" src= "<?= base_url($path) ?>" style="width:280px;height:250px">
 
 					<div class="card-body">
-						<h3 class="card-title"><?=$non_veg->name?></h3>
-						<p class="card-text">Rs.<?=$non_veg->price?></p>
+						<h4 class="card-title"><?=$non_veg->name?></h4>
+						<p class="card-text">Rs.<?=$non_veg->price?> &nbsp;&nbsp;&nbsp; <span class="fa fa-star checked"></span> <?=$non_veg->rate?>/5</p> 
+						
 					</div>
 				</div>
 		   <?php $x++;?>
@@ -146,8 +151,9 @@
 					<img class="card-img-top" src="<?= base_url($path) ?>" style="width:280px;height:250px">
 
 					<div class="card-body">
-						<h3 class="card-title"><?=$brev->name?></h3>
-						<p class="card-text">Rs.<?=$brev->price?></p>
+						<h4 class="card-title"><?=$brev->name?></h4>
+						<p class="card-text">Rs.<?=$brev->price?>&nbsp;&nbsp;&nbsp; <span class="fa fa-star checked"></span><?=$brev->rate?>/5</p>
+						
 					</div>
 				</div>
 		   <?php $x++;?>
