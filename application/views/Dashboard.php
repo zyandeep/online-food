@@ -82,103 +82,52 @@
 <h2 style="color:green;text-align:center;">
 		Vegetarian
 	</h2>
-
 	<div class="container">
-		<div class="card-group">
-
-			<!--bootstrap card with 3 horizontal images-->
-			<div class="row">
-				<div class="card col-md-3">
+		<div class="card-group">   
+           <div class="row">
+           	<?php $x = 0;?>
+            <?php foreach ($vegs as $veg): if ($x == 4): break ?>
+            <?php endif; ?>	
+            <?php $path =$veg->image_path.'/'.$veg->name.'.jpg'?>
+           	<div class="card col-md-3">
 					<img class="card-img-top" src=
-"<?= base_url('assets/img/food/photo-1514537099923-4c0fc7c73161.jpg') ?>" style="width:280px;height:250px">
-
+                     "<?= base_url($path) ?>" style="width:280px;height:250px">
 					<div class="card-body">
-						<h3 class="card-title">Salad</h3>
-						<p class="card-text">Healthy Brocoli Salad</p>
+						<h3 class="card-title"><?=$veg->name?></h3>
+						<p class="card-text">Rs.<?=$veg->price?></p>
 					</div>
 				</div>
-
-				<div class="card col-md-3">
-					<img class="card-img-top" src=
-"<?= base_url('assets/img/food/photo-1540189549336-e6e99c3679fe.jpg') ?>" style="width:280px;height:250px">
-					
-					<div class="card-body">
-						<h3 class="card-title">Juice and Exotic Salad</h3>
-						<p class="card-text">A great combination of orange juice and salad</p>
-					</div>
-				</div>
-				
-				<div class="card col-md-3">
-					<img class="card-img-top" src=
-"<?= base_url('assets/img/food/wp4987405.jpg') ?>" style="width:280px;height:250px">
-					
-					<div class="card-body">
-						<h3 class="card-title">Paneer</h3>
-						<p class="card-text">Shahi Paneer, the Royal food</p>
-					</div>
-				</div>
-				<div class="card col-md-3">
-					<img class="card-img-top" src=
-"<?= base_url('assets/img/food/photo-1514537099923-4c0fc7c73161.jpg') ?>" style="width:280px;height:250px">
-
-					<div class="card-body">
-						<h3 class="card-title">Salad</h3>
-						<p class="card-text">Healthy Brocoli Salad</p>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
+		   <?php $x++;?>
+           <?php endforeach; ?>
+           </div>
+        </div>			
   <div style="text-align: center;">	
   <h3><a href="<?= base_url('menu')?>" class="card-link">View more</a></h3>
   </div>
+
+
 <h2 style="color:green;text-align:center;">
 		Non-Vegetarian
 	</h2>
-
 	<div class="container">
 		<div class="card-group">
-
-			<!--bootstrap card with 3 horizontal images-->
 			<div class="row">
-
-				<div class="card col-md-3">
-					<img class="card-img-top" src="<?= base_url('assets/img/food/pexels-photo-5835353.jpeg') ?>" style="width:280px;height:250px">
-
-					<div class="card-body">
-						<h3 class="card-title">Chicken Thali</h3>
-						<p class="card-text">Simple Indian Chicken with arromatic Basmati Rice </p>
-					</div>
-				</div>
-
-				<div class="card col-md-3">
-					<img class="card-img-top" src="<?= base_url('assets/img/food/photo-1482049016688-2d3e1b311543.jpg') ?>" style="width:280px;height:250px">
-					
-					<div class="card-body">
-						<h3 class="card-title">Egg Boil and Toast</h3>
-						<p class="card-text">Boiled egg with toast in english style for breakfast</p>
-					</div>
-				</div>
-				
-				<div class="card col-md-3">
-					<img class="card-img-top" src="<?= base_url('assets/img/food/pexels-photo-1624487.jpeg') ?>" style="width:280px;height:250px">
-					
-					<div class="card-body">
-						<h3 class="card-title">Biriyani</h3>
-						<p class="card-text">Do we need to describe Biriyani?</p>
-					</div>
-				</div>
-				<div class="card col-md-3">
-					<img class="card-img-top" src="<?= base_url('assets/img/food/pexels-photo-5835353.jpeg') ?>" style="width:280px;height:250px">
+           	<?php $x = 0;?>
+            <?php foreach ($non_vegs as $non_veg): if ($x == 4): break ?>
+            <?php endif; ?>	
+            <?php $path =$non_veg->image_path.'/'.$non_veg->name.'.jpg'?>
+           	<div class="card col-md-3">
+					<img class="card-img-top" src= "<?= base_url($path) ?>" style="width:280px;height:250px">
 
 					<div class="card-body">
-						<h3 class="card-title">Chicken Thali</h3>
-						<p class="card-text">Simple Indian Chicken with arromatic Basmati Rice </p>
+						<h3 class="card-title"><?=$non_veg->name?></h3>
+						<p class="card-text">Rs.<?=$non_veg->price?></p>
 					</div>
 				</div>
-			</div>
-		</div>
-	</div>
+		   <?php $x++;?>
+           <?php endforeach; ?>
+           </div>
+         </div>  
 	<div style="text-align: center;">
     <h3><a href="<?= base_url('menu')?>" class="card-link">View more</a></h3>
     </div >
@@ -188,44 +137,23 @@
 
 	<div class="container">
 		<div class="card-group">
+        			<div class="row">
+           	<?php $x = 0;?>
+            <?php foreach ($brevs as $brev): if ($x == 4): break ?>
+            <?php endif; ?>	
+            <?php $path =$brev->image_path.'/'.$brev->name.'.jpg'?>
+           	<div class="card col-md-3">
+					<img class="card-img-top" src="<?= base_url($path) ?>" style="width:280px;height:250px">
 
-			<!--bootstrap card with 3 horizontal images-->
-			<div class="row">
-				<div class="card col-md-3">
-					<img class="card-img-top" src="<?= base_url('assets/img/food/photo-1616606473122-c3301f07bfb1.jpg') ?>" style="width:280px;height:250px">
-
 					<div class="card-body">
-						<h3 class="card-title">Pineapple Juice</h3>
-						<p class="card-text">Pineapple juice with Soda</p>
+						<h3 class="card-title"><?=$brev->name?></h3>
+						<p class="card-text">Rs.<?=$brev->price?></p>
 					</div>
 				</div>
-
-				<div class="card col-md-3">
-					<img class="card-img-top" src="<?= base_url('assets/img/food/photo-1565958011703-44f9829ba187.jpg') ?>" style="width:280px;height:250px">
-					
-					<div class="card-body">
-						<h3 class="card-title">Pastry</h3>
-						<p class="card-text">Delicious Cheese Strawberry Pastry</p>
-					</div>
-				</div>
-				
-				<div class="card col-md-3">
-					<img class="card-img-top" src="<?= base_url('assets/img/food/photo-1617524455443-e2c807d80d29.jpg') ?>" style="width:280px;height:250px">
-					
-					<div class="card-body">
-						<h3 class="card-title">Lemonade</h3>
-						<p class="card-text">La La Lemony Lemon juice</p>
-					</div>
-				</div>
-				<div class="card col-md-3">
-					<img class="card-img-top" src="<?= base_url('assets/img/food/photo-1617524455443-e2c807d80d29.jpg') ?>" style="width:280px;height:250px">
-					
-					<div class="card-body">
-						<h3 class="card-title">Lemonade</h3>
-						<p class="card-text">La La Lemony Lemon juice</p>
-					</div>
-				</div>
-			</div>
+		   <?php $x++;?>
+           <?php endforeach; ?>
+           </div>
+			
 		</div>
 	</div>
 	<div style="text-align: center;">
