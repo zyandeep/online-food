@@ -17,16 +17,16 @@
       <a class="navbar-brand" href="#">Barbeque Corner</a>
     </div>
     <ul class="nav navbar-nav">
-      <li class="active"><a href="#">Home</a></li>
+      <li class="active"><a href="<?= base_url('dashboard') ?>">Home</a></li>
       
       
     </ul>
     <ul class="nav navbar-nav navbar-right">
     <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Menu <span class="caret"></span></a>
         <ul class="dropdown-menu">
-          <li><a href="<?= base_url('menu')?>">Vegetarian</a></li>
-          <li><a href="<?= base_url('menu')?>">Non-Vegetarian</a></li>
-          <li><a href="<?= base_url('menu')?>">Beverages</a></li>
+          <li><a href="<?= base_url('menu/veg')?>">Vegetarian</a></li>
+          <li><a href="<?= base_url('menu/non_veg')?>">Non-Vegetarian</a></li>
+          <li><a href="<?= base_url('menu/bevrg')?>">Beverages</a></li>
         
         </ul>
       </li>

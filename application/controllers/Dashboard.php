@@ -13,6 +13,7 @@ class Dashboard extends CI_Controller
 
     public function index()
     {
+        
         $this->load->model('items_model');
         $data['vegs'] = $this->items_model->get_veg_items();
         $data['non_vegs'] = $this->items_model->get_nonveg_items();
@@ -20,13 +21,10 @@ class Dashboard extends CI_Controller
         
         $this->load->view('includes/header');
         $this->load->view('Dashboard',$data);
+       
        // $this->load->view('includes/footer');
     }
 
-    public function items()
-    {
-        $this->load->model('items_model');
-        
-    }
+ 
 
 }

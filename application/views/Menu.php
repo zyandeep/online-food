@@ -1,10 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Menu</title>
+
+
+  <title><?=$title?></title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
+
+
 .float-layout {
   padding: 5px 5px;
   float: left;
@@ -68,56 +72,95 @@ div.card-image img {
     width: 100%;
     margin-top: -4px;
   }
+
+  
 }
+
+div.action-panel {
+    padding-right: 0.5rem;
+    text-align: right;
+  }
 </style>
 
 </head>
 <body>
 
-<h2 style="text-align: center;">Vegetarian Menu</h2>
-    
+<h2 style="text-align: center;">Beverages Menu</h2>
+<?php foreach ($items as $item): ?>
+
+<?php $path =$item->image_path.'/'.$item->name.'.jpg'?>
+
+
 <div class="card-container">
   <div class="float-layout">
     <div class="card-image">
-      <img src="<?= base_url('assets/img/food/photo-1617524455443-e2c807d80d29.jpg') ?>"  style="width:200px;height:150px">
+      <img src="<?= base_url($path) ?>"  style="width:200px;height:150px">
       <div class="card">
-        <div class="card-title">Title</div>
+        <div class="card-title"><?=$item->name?></div>
         <div class="card-desc">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce ullamcorper
-          mollis tempus. Mauris eu maximus lectus, eu auctor justo. Aenean porta purus
-          vel commodo consequat.
+        <?=$item->descr?>
+        </div>
+        <div class="action-panel">
+        <button type="button" data-item="<?= $item->item_id  ?>" class="btn btn-outline-light btn-sm">Add To Cart</button>
+        
+
         </div>
       </div>
+     
     </div>   
   </div>
-  <div class="float-layout">
-    <div class="card-image">
-      <img src="<?= base_url('assets/img/food/photo-1617524455443-e2c807d80d29.jpg') ?>"  style="width:200px;height:150px">
-      <div class="card">
-        <div class="card-title">Title</div>
-        <div class="card-desc">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce ullamcorper
-          mollis tempus. Mauris eu maximus lectus, eu auctor justo. Aenean porta purus
-          vel commodo consequat.
-        </div>
-      </div>
-    </div>    
-  </div>
-
-  <div class="float-layout">
-    <div class="card-image">
-      <img src="<?= base_url('assets/img/food/photo-1617524455443-e2c807d80d29.jpg') ?>"  style="width:200px;height:150px">
-      <div class="card">
-        <div class="card-title">Title</div>
-        <div class="card-desc">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce ullamcorper
-          mollis tempus. Mauris eu maximus lectus, eu auctor justo. Aenean porta purus
-          vel commodo consequat.
-        </div>
-      </div>
-    </div>    
-  </div>
-
 </div>
+<?php endforeach; ?>
+
+<div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog">
+    
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Alert</h4>
+        </div>
+        <div class="modal-body">
+          <p>Please Log In First</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+  
+
+<script>
+
+$(document).ready(function () {
+  
+  $("[data-item]").on("click", function(){
+  
+    var loggedIn = Boolean('<?php  echo $this->session->has_userdata('authenticated'); ?>' );   
+   
+    if (! loggedIn) {
+      
+      $("#myModal").modal("show");
+
+    }
+
+
+
+
+  });
+
+
+
+});
+
+</script>
+
+
+
+
+
 </body>
 </html>
