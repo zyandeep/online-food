@@ -85,7 +85,7 @@ div.action-panel {
 </head>
 <body>
 
-<h2 style="text-align: center;">Beverages Menu</h2>
+<h2 style="text-align: center;"><?=$title?></h2>
 <?php foreach ($items as $item): ?>
 
 <?php $path =$item->image_path.'/'.$item->name.'.jpg'?>
