@@ -98,7 +98,7 @@ div.action-panel {
       <div class="card">
         <div class="card-title"><?=$item->name?></div>
         <div class="card-desc">
-        <?=$item->descr?>
+        <?=$item->description?>
         </div>
         <div class="action-panel">
         <button type="button" data-item="<?= $item->item_id  ?>" class="btn btn-outline-light btn-sm">Add To Cart</button>
