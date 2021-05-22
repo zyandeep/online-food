@@ -32,6 +32,7 @@
       </li>
       <li><a href="<?= base_url('signup') ?>"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
       <li><a href="<?= base_url('login') ?>"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+      <li><a href="<?= base_url('cart') ?>"><span class="glyphicon glyphicon-log-in"></span> Cart</a></li>
     </ul>
   </div>
 </nav>

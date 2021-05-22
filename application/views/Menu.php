@@ -84,10 +84,31 @@
     }
   </style>
 
+  <script>
+  	function add_to_session(item_id,item_name,item_desc,item_price){
+        var quantity=document.getElementById("quantity").value; 
+        if (typeof(Storage) !== "undefined") {
+        //form array
+        var order = []; 	
+        //order.push(item_id);
+        order.push(item_name);
+        order.push(item_desc);
+        order.push(quantity);
+        order.push(item_price);
+        
+        // Store
+        localStorage.setItem(item_id, JSON.stringify(order));
+  	    }
+  	}
+   
+  </script>
+
+
+
 </head>
 
 <body>
-
+  <form method='post' action='<?= base_url(); ?>'>
   <h2 style="text-align: center;"><?= $title ?></h2>
   <?php foreach ($items as $item) : ?>
 
@@ -108,8 +129,10 @@
                 <div class="action-panel">
                 <label for="quantity">Quantity:</label>
                 <input type="number" id="quantity" name="quantity" min="1" max="10">
-              <button type="button" data-item="<?= $item->item_id  ?>" class="btn btn-outline-light btn-sm">Add To Cart</button>
-
+              <button type="button" data-item="<?= $item->item_id  ?>" data-name="<?= $item->name  ?>" class="btn btn-outline-light btn-sm" 
+                onclick="add_to_session(<?= $item->item_id ?>,'<?php echo $item->name ?>','<?php echo $item->description ?>','<?php echo $item->price ?>')">Add To Cart</button>
+              
+                
 
             </div>
               </form>
@@ -120,7 +143,7 @@
       </div>
     </div>
   <?php endforeach; ?>
-
+  </form>
   <div class="modal fade" id="myModal" role="dialog">
     <div class="modal-dialog">
 
