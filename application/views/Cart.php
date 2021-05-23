@@ -17,8 +17,10 @@
         orders.push(JSON.parse(`${localStorage.getItem(key)}`));
        }
     }
-    alert(orders);
+
+    
     $(document).ready(function() {
+        
     $('#example').DataTable( {
         data: orders,
         columns: [
@@ -27,19 +29,32 @@
             { title: "Quantity" },
             { title: "Price" },
             { title: "Total"},
-            { title: ""},
+            { title: "Remove"},
 
         ],
         columnDefs: [ {
             "targets": -1,
             "data": null,
-            "defaultContent": "<button>Remove</button>"
+            "defaultContent":' <button id="Remove">Delete item</button>',
 
         }
          ]
+         
     } );
-
+    
+    $('#Remove').click(function(){
+        for(let key in localStorage) {
+        if (!isNaN(key)){
+        orders.push(JSON.parse(`${localStorage.removeItem(key)}`));
+        
+       }
+       
+    }
+    location.reload();
+});
 } );
+
+
     
 </script>
 

@@ -3,7 +3,6 @@
 
 <head>
 
-
   <title><?= $title ?></title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -84,23 +83,80 @@
     }
   </style>
 
+
   <script>
-  	function add_to_session(item_id,item_name,item_desc,item_price){
-        var quantity=document.getElementById("quantity").value; 
-        if (typeof(Storage) !== "undefined") {
-        //form array
-        var order = []; 	
+
+    $(document).ready(function () {
+      
+      $('form').on('submit', function (event) {
+        event.preventDefault();
+
+
+        var loggedIn = Boolean('<?php echo $this->session->has_userdata('authenticated'); ?>');
+
+        if (!loggedIn) {
+
+          $("#myModal").modal("show");
+          return;
+        }
+
+
+
+
+
+
+
+        const quantity = $(this).find('[name="quantity"]').first().val();
+        const item_id = $(this).find('[name="item_id"]').first().val();
+        const item_name = $(this).find('[name="item_name"]').first().val();
+        const item_price = $(this).find('[name="item_price"]').first().val();
+        const item_desc = $(this).find('[name="item_desc"]').first().val();
+
+        const order = [];
         //order.push(item_id);
         order.push(item_name);
         order.push(item_desc);
         order.push(quantity);
         order.push(item_price);
-        
+        order.push(item_price * quantity);
         // Store
         localStorage.setItem(item_id, JSON.stringify(order));
-  	    }
-  	}
-   
+
+        console.log(order);
+
+
+      });
+
+    });
+
+    
+
+
+    function add_to_cart(item_id, item_name, item_desc, item_price, ) {
+      // var quantity = document.getElementById("quantity").value;
+
+      
+
+
+
+
+
+
+      if (typeof(Storage) !== "undefined") {
+        //form array
+        var order = [];
+        //order.push(item_id);
+        order.push(item_name);
+        order.push(item_desc);
+        order.push(quantity);
+        order.push(item_price);
+        order.push(item_price * quantity);
+
+
+        // Store
+        localStorage.setItem(item_id, JSON.stringify(order));
+      }
+    }
   </script>
 
 
@@ -109,40 +165,45 @@
 
 <body>
   <form method='post' action='<?= base_url(); ?>'>
-  <h2 style="text-align: center;"><?= $title ?></h2>
-  <?php foreach ($items as $item) : ?>
+    <h2 style="text-align: center;"><?= $title ?></h2>
+    <?php foreach ($items as $item) : ?>
 
-    <?php $path = $item->image_path . '/' . $item->name . '.jpg' ?>
+      <?php $path = $item->image_path . '/' . $item->name . '.jpg' ?>
 
 
-    <div class="card-container">
-      <div class="float-layout">
-        <div class="card-image">
-          <img src="<?= base_url($path) ?>" style="width:200px;height:150px">
-          <div class="card">
-            <div class="card-title"><?= $item->name ?></div>
-            <div class="card-desc">
-              <?= $item->description ?>
-            </div>
-            <form action="#">
-               
+      <div class="card-container">
+        <div class="float-layout">
+          <div class="card-image">
+            <img src="<?= base_url($path) ?>" style="width:200px;height:150px">
+            <div class="card">
+              <div class="card-title"><?= $item->name ?></div>
+              <div class="card-desc">
+                <?= $item->description ?>
+              </div>
+
+              <form>
+
                 <div class="action-panel">
-                <label for="quantity">Quantity:</label>
-                <input type="number" id="quantity" name="quantity" min="1" max="10">
-              <button type="button" data-item="<?= $item->item_id  ?>" data-name="<?= $item->name  ?>" class="btn btn-outline-light btn-sm" 
-                onclick="add_to_session(<?= $item->item_id ?>,'<?php echo $item->name ?>','<?php echo $item->description ?>','<?php echo $item->price ?>')">Add To Cart</button>
-              
-                
+                  <label for="quantity">Quantity:</label>
+                  <input type="number" name="quantity" min="1" max="10" required>
+
+                  <input type="hidden" name="item_id" value="<?= $item->item_id  ?>">
+                  <input type="hidden" name="item_name" value="<?= $item->name  ?>">
+                  <input type="hidden" name="item_price" value="<?= $item->price  ?>">
+                  <input type="hidden" name="item_desc" value="<?= $item->description  ?>">
+
+                  <button type="submit"  class="btn btn-outline-light btn-sm">Add To Cart</button>
+
+                </div>
+
+              </form>
 
             </div>
-              </form>
-           
-          </div>
 
+          </div>
         </div>
       </div>
-    </div>
-  <?php endforeach; ?>
+    <?php endforeach; ?>
   </form>
   <div class="modal fade" id="myModal" role="dialog">
     <div class="modal-dialog">
@@ -163,33 +224,6 @@
 
     </div>
   </div>
-
-
-  <script>
-    $(document).ready(function() {
-
-      $("[data-item]").on("click", function() {
-
-        var loggedIn = Boolean('<?php echo $this->session->has_userdata('authenticated'); ?>');
-
-        if (!loggedIn) {
-
-          $("#myModal").modal("show");
-
-        }
-
-
-
-
-      });
-
-
-
-    });
-  </script>
-
-
-
 
 
 </body>
