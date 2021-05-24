@@ -119,6 +119,7 @@
         order.push(quantity);
         order.push(item_price);
         order.push(item_price * quantity);
+        order.push(item_id);
         // Store
         localStorage.setItem(item_id, JSON.stringify(order));
 

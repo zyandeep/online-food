@@ -44,10 +44,8 @@
     
     $('#Remove').click(function(){
         for(let key in localStorage) {
-        if (!isNaN(key)){
-        orders.push(JSON.parse(`${localStorage.removeItem(key)}`));
-        
-       }
+            
+            orders.push(JSON.parse(`${localStorage.removeItem(key)}`));
        
     }
     location.reload();
