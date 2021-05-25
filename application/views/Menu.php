@@ -99,6 +99,9 @@
           $("#myModal").modal("show");
           return;
         }
+        else{
+          $("#alert").modal("show");
+         
 
 
 
@@ -124,7 +127,7 @@
         localStorage.setItem(item_id, JSON.stringify(order));
 
         console.log(order);
-
+        }
 
       });
 
@@ -179,7 +182,9 @@
             <div class="card">
               <div class="card-title"><?= $item->name ?></div>
               <div class="card-desc">
-                <?= $item->description ?>
+                <?= $item->description ?>&nbsp;&nbsp;&nbsp;
+                ₹<?= $item->price  ?>&nbsp;&nbsp;&nbsp;
+                <span class="fa fa-star checked"></span><?=$item->rate?>/5</p>
               </div>
 
               <form>
@@ -217,6 +222,25 @@
         </div>
         <div class="modal-body">
           <p>Please Log In First</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+  <div class="modal fade" id="alert" role="dialog">
+    <div class="modal-dialog">
+
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Alert</h4>
+        </div>
+        <div class="modal-body">
+          <p>Item Added to Cart</p>
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>

@@ -7,7 +7,7 @@
   <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script> -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  
   <style>
 		img {
 			max-width: 100%;
@@ -65,22 +65,6 @@
 </div>
 
 
-<!-- <div class="container">
-  <h2>Card Image</h2>
-  <p>Image at the top (card-img-top):</p>
-  <div class="card" style="width:400px">
-    <img class="card-img-top" src="<!?= base_url('assets/img/collection.jpg') ?>" alt="Card image" style="width:100%">
-    <img class="card-img-top" src="<!?= base_url('assets/img/collection.jpg') ?>" alt="Card image" style="width:100%">
-    <div class="card-body">
-      <h4 class="card-title">John Doe</h4>
-      <p class="card-text">Some example text some example text. John Doe is an architect and engineer</p>
-      <a href="#" class="btn btn-primary">See Profile</a>
-    </div>
-    
-  </div>
-  
-  
-</div> -->
 
 <h2 style="color:green;text-align:center;">
 		Vegetarian
@@ -97,7 +81,7 @@
                      "<?= base_url($path) ?>" style="width:280px;height:250px">
 					<div class="card-body">
 						<h4 class="card-title"><?=$veg->name?></h4>
-						<p class="card-text">Rs.<?=$veg->price?>&nbsp;&nbsp;&nbsp; <span class="fa fa-star checked"></span><?=$veg->rate?>/5</p>
+						<p class="card-text">₹<?=$veg->price?>&nbsp;&nbsp;&nbsp; <span class="fa fa-star checked"></span><?=$veg->rate?>/5</p>
 						
 					</div>
 				</div>
