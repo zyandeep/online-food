@@ -12,9 +12,11 @@
 
 <style>
 #place{
-    position:absolute;
-bottom:20rem;
-margin-left: 105rem;
+    float:right;
+background-color: wheat;
+}
+#edit{
+   
 background-color: wheat;
 }
 </style>
@@ -76,11 +78,19 @@ background-color: wheat;
 
 <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
 <div class="container">
-	<h3>Cart</h3>
-	<table id="example" class="table table-striped table-bordered" style="width:100%">
-    
+    <div class="col-sm-1"></div>
+    <div class="col-sm-10">
+        <div class="row">
+	       <h3>Cart</h3>
+	       <table id="example" class="table table-striped table-bordered" style="width:100%"></table>
+        </div>
+        <div class="row" style="padding-top: 10px;">
+            <button id="edit">Edit Order</button>
+            <button id="place">Place Order</button>
+        </div>
+    </div>
+    <div class="col-sm-1"></div>
 </div>
-<button id="place">Edit Order</button>
-<button id="place">Place Order</button>
+
 </body>
 </html>
