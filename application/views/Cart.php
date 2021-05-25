@@ -85,7 +85,7 @@ background-color: wheat;
 	       <table id="example" class="table table-striped table-bordered" style="width:100%"></table>
         </div>
         <div class="row" style="padding-top: 10px;">
-            <button id="edit">Edit Order</button>
+            <button id="edit" ><a href="<?= base_url('menu/veg')?>" style="color: black;">Edit Order</a></button>
             <button id="place">Place Order</button>
         </div>
     </div>
