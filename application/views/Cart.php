@@ -80,6 +80,7 @@ background-color: wheat;
 	<table id="example" class="table table-striped table-bordered" style="width:100%">
     
 </div>
+<button id="place">Edit Order</button>
 <button id="place">Place Order</button>
 </body>
 </html>

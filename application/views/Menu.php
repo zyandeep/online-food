@@ -21,7 +21,7 @@
     }
 
     .card {
-      background-color: dodgerblue;
+      background-color: #8383dc;
       color: black;
       height: 15rem;
       /*replace this it in width: 100%*/
@@ -33,7 +33,6 @@
       font-size: 30px;
       text-align: center;
       font-weight: bold;
-      padding-top: 20px;
     }
 
     .card-desc {
@@ -45,9 +44,11 @@
     /*add this it*/
     .card-image {
       display: flex;
-      margin-left: 20rem;
+      margin-left: 28rem;
     }
-
+    .checked {
+    color: green;
+    }
     /*-------------*/
 
     div.card-image img {
@@ -169,7 +170,7 @@
 
 <body>
   <form method='post' action='<?= base_url(); ?>'>
-    <h2 style="text-align: center;"><?= $title ?></h2>
+    <h3 style="text-align: center;"><?= $title ?></h3>
     <?php foreach ($items as $item) : ?>
 
       <?php $path = $item->image_path . '/' . $item->name . '.jpg' ?>
@@ -180,8 +181,8 @@
           <div class="card-image">
             <img src="<?= base_url($path) ?>" style="width:200px;height:150px">
             <div class="card">
-              <div class="card-title"><?= $item->name ?></div>
-              <div class="card-desc">
+              <div class="card-title"><h4><?= $item->name ?></h4></div>
+              <div class="card-desc" style="font-size: 15px;">
                 <?= $item->description ?>&nbsp;&nbsp;&nbsp;
                 ₹<?= $item->price  ?>&nbsp;&nbsp;&nbsp;
                 <span class="fa fa-star checked"></span><?=$item->rate?>/5</p>
