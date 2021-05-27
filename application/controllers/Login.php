@@ -43,9 +43,9 @@ class Login extends CI_Controller{
             
             if($user){
                 $userdata = array(
-                    'customer_id' => $user->id,
+                    'customer_id' => $user->customer_id,
                     'name' => $user->name,
-                    'mobile' => $user->mobile,
+                    'mobile' => $user->mobile_no,
                     'authenticated' => TRUE
                 );
                 
@@ -63,7 +63,7 @@ class Login extends CI_Controller{
     public function logout()
     {
         $this->session->sess_destroy();
-        redirect('login/index');
+        redirect('dashboard');
     }
 }
 ?>

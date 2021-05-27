@@ -32,9 +32,17 @@
         
         </ul>
       </li>
+      <?php 
+//here we check if session `username` is exist. so it means that the current user is logged in correctly
+if($this->session->userdata('authenticated')) : ?>
+<li><a href="<?= base_url('profile') ?>"><span class="glyphicon glyphicon-user"></span>Hello <?=$this->session->userdata('name');?></a></li>
+     <li><a href="<?= base_url('cart') ?>"><span class="glyphicon glyphicon-log-in"></span> Cart</a></li>
+     <li><a href="<?= base_url('login/logout') ?>"><span class="glyphicon glyphicon-off"></span> Log Out</a></li>
+      <?php else : ?>
+      
       <li><a href="<?= base_url('signup') ?>"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
       <li><a href="<?= base_url('login') ?>"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
-      <li><a href="<?= base_url('cart') ?>"><span class="glyphicon glyphicon-log-in"></span> Cart</a></li>
+      <?php endif;?>
     </ul>
   </div>
 </nav>
