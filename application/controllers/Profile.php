@@ -19,10 +19,10 @@ class Profile extends CI_Controller {
 			
             $data['info'] = null;
             if($query) {
-                $data['info'] =  $query;
+                $data['info'] =  $query[0];
             }
 			$this->load->view('includes/header');
-			$this->load->view('profile',$data);
+			$this->load->view('profile_new',$data);
        } 
 	}
 }

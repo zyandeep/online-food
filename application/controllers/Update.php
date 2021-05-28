@@ -18,11 +18,18 @@ class Update extends CI_Controller {
 	{
         $this->load->model('update_model');
 
+        $query=$this->update_model->get_details();
 
-       $data['user_details'] = $this->update_model->get_details();
         $this->load->view('includes/header');
-        $this->load->view('update',$data);
-
+        $this->load->view('update');
        
+     }
+
+     public function update_action()
+     {
+        $this->load->model('update_model');
+
+        
+
      }
 }
