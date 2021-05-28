@@ -36,7 +36,7 @@
   </style>
 </head>
 <body >
-    <h2 style="text-align: center;color:yellowgreen">Welcome to FoodPark <b><?=$this->session->userdata('name');?></b></h2>
+    <h2 style="text-align: center;color:darkslategrey">Welcome to FoodPark <b><?=$this->session->userdata('name');?></b></h2>
     
     <table class="center" >
     <tr>
@@ -89,6 +89,6 @@
     </tr>
     </table>
 <br>
-    <a href="#" class="update">Update Details</a>
+    <a href="<?=base_url('update');?>" class="update">Update Details</a>
 </body>
 </html>

@@ -12,7 +12,9 @@
 <h3>Update detail</h3>
     <?php echo $this->session->flashdata('msg'); ?>
     <?php echo form_open(); ?>
+
     <input type="text" id="customer_id" name="customer_id" value="<?php echo  $this->session->userdata('customer_id'); ?>">
+    
     <div>
     <input type="text" id="name" name="name" placeholder="name" value="<?php echo  $this->session->userdata('name'); ?>">
     <small class="error-text"><?php echo form_error('name'); ?></small>
