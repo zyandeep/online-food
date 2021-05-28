@@ -8,20 +8,34 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <style>
+    body {
+  background-image: url(<?=base_url('assets/img/food/pexels-photo-315755.jpeg')?>);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
   table, th, td {
-  border: 1px solid black;
+    border: 1px solid #ddd;
+  padding: 8px;
+}
+.center tr:hover {background-color: #ddd;}
+
+.center th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #04AA6D;
+  color: white;
 }
 .center {
   margin-left: auto;
   margin-right: auto;
 }
-
 .update{
   margin-left: 58rem;
 }
   </style>
 </head>
-<body>
+<body >
     <h2 style="text-align: center;color:yellowgreen">Welcome to FoodPark <b><?=$this->session->userdata('name');?></b></h2>
     
     <table class="center" >
@@ -75,6 +89,6 @@
     </tr>
     </table>
 <br>
-    <a href="<?= base_url('update') ?>" class="update">Update Details</a>
+    <a href="#" class="update">Update Details</a>
 </body>
 </html>
