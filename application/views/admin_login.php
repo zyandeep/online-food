@@ -10,12 +10,11 @@
 
 <body>
 
-
 <div class="container">
     <div class="row">
         <div class="col-md-6">
             <div class="box">
-            <?php echo form_open('login/index', array('id' => 'loginForm'))  ?>
+            <?php echo form_open('admin_login/index', array('id' => 'loginForm'))  ?>
                 <!-- <form onsubmit="event.preventDefault()" class="box"> -->
                     <h1>Login</h1>
                     <p class="text-muted"> Please enter your Email and Password!</p> <input type="text" name="email" placeholder="Email"> <input type="password" name="password" placeholder="Password"> <a class="forgot text-muted" href="#">Forgot password?</a> 
