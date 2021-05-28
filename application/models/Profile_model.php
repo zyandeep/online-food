@@ -5,22 +5,19 @@ class Profile_model extends CI_Model{
     public function __construct()
     {
         parent::__construct();
-        $this->db->select('customers');
+       
 
     }
 
-public function details($mail,$pass)
+public function details()
 {
-   $mail= $this->db->select('email', $this->session->userdata('email'));
-   return $mail;
+    $this->db->select("email,password,address");
+$this->db->from('customers');
 
-       
+$this->db->where("customer_id", $this->session->userdata('customer_id'));
 
-   $pass= $this->db->select('password',  $this->session->userdata('password'));
-       return $pass;
-      
-       
-
+$query = $this->db->get();
+return $query->result();
 }
 
 }
