@@ -21,13 +21,15 @@
 </head>
 
 
-
-
 <body>
 
     <h2>Update Your Details</h2>
 
-    <form action="" method="post">
+
+    <?php echo validation_errors(); ?>
+    <p><?= $this->session->flashdata('message');?></p>
+
+    <?php echo form_open('profile/update_profile'); ?>
 
         <input type="hidden" name="customer_id" value="<?= $this->session->userdata('customer_id') ?>">
 
@@ -55,12 +57,12 @@
 
             <p>
                 <label for="new_pwd">New Password</label><br>
-                <input type="password" name="new_pwd" id="new_pwd" required>
+                <input type="password" name="new_pwd" id="new_pwd">
             </p>
 
             <p>
                 <label for="conf_pwd">Confirm Password</label><br>
-                <input type="password" name="conf_pwd" id="conf_pwd" required>
+                <input type="password" name="conf_pwd" id="conf_pwd">
             </p>
 
             <button type="submit">Submit</button>
@@ -84,6 +86,8 @@
 $(document).ready(function () {
 
 $('#editBtn').on('click', function (event) {
+
+    event.preventDefault();
     
     $('form  *').removeClass('hide-section');
     $('#editBtn').addClass('hide-section');
@@ -92,6 +96,8 @@ $('#editBtn').on('click', function (event) {
 });
 
 $('#cnclBtn').on('click', function (event) {
+
+    event.preventDefault();
     
     $('form div').addClass('hide-section');
     $('#editBtn').removeClass('hide-section');

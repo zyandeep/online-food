@@ -18,4 +18,11 @@ class Profile_model extends CI_Model
         $query = $this->db->get();
         return $query->result();
     }
+
+    public function update_details($customer_id, $data=array())
+    {
+    //    $this->db->update('mytable', $data, array('id' => $id));
+        $this->db->where('customer_id', $customer_id);
+        $this->db->update('customers', $data);
+    }
 }
