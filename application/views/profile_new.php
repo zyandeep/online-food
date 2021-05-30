@@ -29,8 +29,8 @@
         }
 
         input {
-            background-color: lightgreen;
-            color: white;
+            background-color: whitesmoke;
+            color: black;
             width: 50%;
         }
 
