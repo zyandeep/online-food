@@ -132,7 +132,7 @@
                     <button id="place">Place Order</button>
                 </div>
 
-                <h2>Total Amount: <span id="totalAmount"></span> </h2>
+                <h2 style="text-align: center; color:teal"><b>Total Amount: <span id="totalAmount"></span></b> </h2>
             </div>
 
 
