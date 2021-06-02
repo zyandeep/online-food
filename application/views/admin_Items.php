@@ -75,29 +75,35 @@
 <body>
   
   <div class="row">
-  
   <div class="column">
   <table class="center">
-  <h2 style="text-align: center;"> List Of Orders</h2>
+  <h2 style="text-align: center;">List of Items</h2>
     <thead>
       <tr>
-        <th>Bill ID </th>
-
-        <th>Customer ID </th>
-        <th>Status </th>
-        <th>Bill Date </th>
-        <th>Bill Summary </th>
-        <th>Bill Amount </th>
-        <th> Action </th>
-
+        <th>Item Name </th>
+        <th>Category </th>
+        <th>Price </th>
+        <th>Image </th>
+        <th>Rating</th>
+        <th>Description </th>
       </tr>
     </thead>
+    <tbody>
+      <tr>
+        <?php foreach ($item as $items) : ?>
+          <td> <?= $items->name ?></td>
+          <td> <?= $items->category ?></td>
+          <td> ₹<?= $items->price ?></td>
+          <td>
+          <img src=" <?= base_url($items->image_path.'/'.$items->name.'.jpg')  ?>" alt="" border=3 height=100 width=100></img>
+           </td>
+          <td> <?= $items->rate ?><span class="fa fa-star checked"></td>
+          <td> <?= $items->description?></td>
+      </tr>
+    <?php endforeach; ?>
     </tbody>
   </table>
   </div>
-
- 
- 
   </div>
 </body>
 
