@@ -87,6 +87,7 @@
         <th>Status </th>
         <th>Bill Date </th>
         <th>Bill Summary </th>
+        <th>Bill Amount </th>
         <th> Action </th>
 
       </tr>
