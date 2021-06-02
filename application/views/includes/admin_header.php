@@ -24,6 +24,13 @@
       
     </ul>
     <ul class="nav navbar-nav navbar-right">
+      <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#"> View <span class="caret"></span></a>
+        <ul class="dropdown-menu">
+          <li><a href="<?= base_url('admin_Customers')?>">Customers</a></li>
+          <li><a href="<?= base_url('admin_Items')?>">Items</a></li>
+        
+        </ul>
+      </li>
       <?php 
 //here we check if session `username` is exist. so it means that the current user is logged in correctly
 if($this->session->userdata('authenticated')) : ?>

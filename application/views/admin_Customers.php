@@ -78,25 +78,35 @@
   
   <div class="column">
   <table class="center">
-  <h2 style="text-align: center;"> List Of Orders</h2>
+  <h2 style="text-align: center;"> Customers Informations</h2>
     <thead>
       <tr>
-        <th>Bill ID </th>
+        <th>Customer Name </th>
 
         <th>Customer ID </th>
-        <th>Status </th>
-        <th>Bill Date </th>
-        <th>Bill Summary </th>
-        <th> Action </th>
+        <th>Mobile No. </th>
+        <th>Email </th>
+        <th>Address </th>
 
       </tr>
     </thead>
+    <tbody>
+      <tr>
+        <?php foreach ($info as $infos) : ?>
+          <td> <?= $infos->name ?></td>
+          <td> <?= $infos->customer_id ?></td>
+          <td> <?= $infos->mobile_no ?></td>
+          <td> <?= $infos->email ?></td>
+          <td> <?= $infos->address ?></td>
+      </tr>
+    <?php endforeach; ?>
+
+
+
     </tbody>
   </table>
   </div>
 
- 
- 
   </div>
 </body>
 
