@@ -127,8 +127,9 @@
       </tr>
     </thead>
     <tbody>
-      <tr>
+    
         <?php foreach ($item as $items) : ?>
+          <tr>
           <td> <?= $items->name ?></td>
           <td> <?= $items->category ?></td>
           <td> ₹<?= $items->price ?></td>
@@ -137,9 +138,9 @@
            </td>
           <td> <?= $items->rate ?><span class="fa fa-star checked"></td>
           <td> <?= $items->description?></td>
-      </tr>
+          </tr>
     <?php endforeach; ?>
-
+    
 
 
     </tbody>

@@ -42,8 +42,9 @@
 <body>
 
     <h2 style="text-align: center;color:green;"><b>Update Your Details</b></h2>
-
-
+    
+    <a href="<?=base_url('profile/history')?>"><b>Order History</b></a>
+    
     <?php echo validation_errors(); ?>
     <p><?= $this->session->flashdata('message'); ?></p>
 

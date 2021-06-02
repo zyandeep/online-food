@@ -25,4 +25,16 @@ class Profile_model extends CI_Model
         $this->db->where('customer_id', $customer_id);
         $this->db->update('customers', $data);
     }
+
+    public function get_history()
+    {
+        $this->db->select("*");
+        $this->db->from('bills');
+
+        $this->db->where("customer_id", $this->session->userdata('customer_id'));
+        $this->db->order_by('bill_id', 'DESC');
+
+        $query = $this->db->get();
+        return $query->result();
+    }
 }
