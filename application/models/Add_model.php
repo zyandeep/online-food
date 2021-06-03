@@ -9,24 +9,10 @@ class Add_model extends CI_Model
         parent::__construct();
     }
 
-    public function add_item()
+    public function add_item($data = array())
     {
+       // pre($data);
 
-        $name=$this->input->post('name');
-        $category=$this->input->post('category');
-        $price=$this->input->post('price');
-        $image_path=$this->input->post('image_path');
-        $rate=$this->input->post('rate');
-        $description=$this->input->post('description');
-
-        $data = array(
-            'name' => $name,
-            'category'=>$category,
-            'price' => $price,
-            'image_path' => $image_path,
-            'rate' => $rate,
-            'description' => $description
-        );
 
         $this->db->insert('items', $data);
     }

@@ -18,7 +18,7 @@ class Items_model extends CI_Model {
     public function get_nonveg_items() {
     	$this->db->select('*');
 		$this->db->from('items');
-		$this->db->where("category","NON_VEG");
+		$this->db->where("category","NONVEG");
 		$query=$this->db->get();
         return $query->result();
     }

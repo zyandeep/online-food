@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
   <title>Home</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -75,10 +76,10 @@
            	<?php $x = 0;?>
             <?php foreach ($vegs as $veg): if ($x == 4): break ?>
             <?php endif; ?>	
-            <?php $path =$veg->image_path.'/'.$veg->name.'.jpg'?>
+           
            	<div class="card col-md-3">
 					<img class="card-img-top" src=
-                     "<?= base_url($path) ?>" style="width:280px;height:250px">
+                     "<?= base_url($veg->image_path) ?>" style="width:280px;height:250px">
 					<div class="card-body">
 						<h4 class="card-title"><?=$veg->name?></h4>
 						<p class="card-text">₹<?=$veg->price?>&nbsp;&nbsp;&nbsp; <span class="fa fa-star checked"></span><?=$veg->rate?>/5</p>
@@ -103,9 +104,9 @@
            	<?php $x = 0;?>
             <?php foreach ($non_vegs as $non_veg): if ($x == 4): break ?>
             <?php endif; ?>	
-            <?php $path =$non_veg->image_path.'/'.$non_veg->name.'.jpg'?>
+            
            	<div class="card col-md-3">
-					<img class="card-img-top" src= "<?= base_url($path) ?>" style="width:280px;height:250px">
+					<img class="card-img-top" src= "<?= base_url($non_veg->image_path) ?>" style="width:280px;height:250px">
 
 					<div class="card-body">
 						<h4 class="card-title"><?=$non_veg->name?></h4>
@@ -130,9 +131,9 @@
            	<?php $x = 0;?>
             <?php foreach ($brevs as $brev): if ($x == 4): break ?>
             <?php endif; ?>	
-            <?php $path =$brev->image_path.'/'.$brev->name.'.jpg'?>
+           
            	<div class="card col-md-3">
-					<img class="card-img-top" src="<?= base_url($path) ?>" style="width:280px;height:250px">
+					<img class="card-img-top" src="<?= base_url($brev->image_path) ?>" style="width:280px;height:250px">
 
 					<div class="card-body">
 						<h4 class="card-title"><?=$brev->name?></h4>

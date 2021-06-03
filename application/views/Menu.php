@@ -173,13 +173,13 @@
     <h3 style="text-align: center;"><?= $title ?></h3>
     <?php foreach ($items as $item) : ?>
 
-      <?php $path = $item->image_path . '/' . $item->name . '.jpg' ?>
+      
 
 
       <div class="card-container">
         <div class="float-layout">
           <div class="card-image">
-            <img src="<?= base_url($path) ?>" style="width:200px;height:150px">
+            <img src="<?= base_url($item->image_path) ?>" style="width:200px;height:150px">
             <div class="card">
               <div class="card-title"><h4><?= $item->name ?></h4></div>
               <div class="card-desc" style="font-size: 15px;">

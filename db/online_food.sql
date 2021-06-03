@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jun 02, 2021 at 03:25 PM
+-- Generation Time: Jun 03, 2021 at 12:43 PM
 -- Server version: 10.4.17-MariaDB
 -- PHP Version: 7.4.13
 
@@ -100,7 +100,7 @@ INSERT INTO `customers` (`customer_id`, `name`, `address`, `mobile_no`, `passwor
 CREATE TABLE `items` (
   `item_id` int(11) NOT NULL,
   `name` varchar(255) NOT NULL,
-  `category` enum('VEG','NON_VEG','BEVERAGE','') NOT NULL,
+  `category` enum('VEG','NONVEG','BEVERAGE','') NOT NULL,
   `price` int(11) NOT NULL,
   `image_path` varchar(500) NOT NULL,
   `rate` int(5) NOT NULL,
@@ -112,19 +112,19 @@ CREATE TABLE `items` (
 --
 
 INSERT INTO `items` (`item_id`, `name`, `category`, `price`, `image_path`, `rate`, `description`) VALUES
-(1, 'Veg Chowmin', 'VEG', 75, 'storage/items/veg', 4, 'Tasty Chowmin with healthy veggies'),
-(2, 'Veg Kebab', 'VEG', 100, 'storage/items/veg', 3, 'Vegetable Kebab with extra spice'),
-(3, 'Veg Paneer tikka', 'VEG', 120, 'storage/items/veg', 3, 'Paneer Tikka grilled in barbeque '),
-(4, 'Veg roll', 'VEG', 80, 'storage/items/veg', 5, 'Roll stuffed with healthy and yummy vegetables'),
-(5, 'Chicken biryani', 'NON_VEG', 150, 'storage/items/nonveg', 2, 'The king of biriyanis, Chicken Biriyani'),
-(6, 'Chicken momos', 'NON_VEG', 120, 'storage/items/nonveg', 3, 'Juicy and soft momos stuffed with chicken'),
-(7, 'chicken roll', 'NON_VEG', 100, 'storage/items/nonveg', 3, 'Roll stuffed with chicken and mayonise'),
-(8, 'chicken wings', 'NON_VEG', 100, 'storage/items/nonveg', 2, 'Chicken with wings, just joking'),
-(9, 'coke', 'BEVERAGE', 50, 'storage/items/beverage', 3, 'Chilled Coca Cola'),
-(10, 'chicken dum biryani', 'NON_VEG', 165, 'storage/items/nonveg', 4, 'Chicken Dum Biriyani, Fully Loaded'),
-(11, 'thumsup', 'BEVERAGE', 45, 'storage/items/beverage', 5, 'Chilled Thums Up'),
-(12, 'Mineral water', 'BEVERAGE', 20, 'storage/items/beverage', 3, 'Chilled Mineral Water'),
-(13, 'chicken tikka roll', 'NON_VEG', 50, 'storage/items/nonveg', 4, 'Chicken Tikka Roll with fully loaded Chicken');
+(3, 'Veg Chowmin', 'VEG', 50, 'storage/items/veg/Veg_Chowmin.jpg', 3, 'Vegetable Chowmin'),
+(4, 'Chicken Biriyani', 'NONVEG', 150, 'storage/items/nonveg/Chicken_Biriyani.jpg', 4, 'Tasty Chicken'),
+(5, 'Coca Cola', 'BEVERAGE', 45, 'storage/items/beverage/Coca_Cola.jpg', 4, 'Chilled Coke'),
+(6, 'Mineral Water', 'BEVERAGE', 20, 'storage/items/beverage/Mineral_Water.jpg', 5, 'Chilled water'),
+(7, 'Chicken Roll', 'NONVEG', 60, 'storage/items/nonveg/Chicken_Roll.jpg', 5, 'Chicken Roll'),
+(8, 'Chicken Tikka Roll', 'NONVEG', 80, 'storage/items/nonveg/Chicken_Tikka_Roll.jpg', 4, 'Chicken roll stuffed with tasty chicken'),
+(9, 'Chicken Momos', 'NONVEG', 60, 'storage/items/nonveg/Chicken_Momos.jpg', 5, 'Chicken Momos'),
+(10, 'Chicken Dum Biriyani', 'NONVEG', 200, 'storage/items/nonveg/Chicken_Dum_Biriyani.jpg', 5, 'Special Chicken Biriyani'),
+(11, 'Chicken Wings', 'NONVEG', 100, 'storage/items/nonveg/Chicken_Wings.jpg', 4, 'Chicken with wings, just joking'),
+(12, 'Thums Up', 'BEVERAGE', 45, 'storage/items/beverage/Thums_Up.jpg', 4, 'Chilled Thums up'),
+(13, 'Veg Kabab', 'VEG', 99, 'storage/items/veg/Veg_Kabab.jpg', 5, 'Vegetarian Kabab'),
+(14, 'Veg Paneer Tikka', 'VEG', 149, 'storage/items/veg/Veg_Paneer_Tikka.jpg', 5, 'Paneer Tikka'),
+(15, 'Veg Roll', 'VEG', 50, 'storage/items/veg/Veg_Roll.jpg', 5, 'Roll stuffed with healthy veggies');
 
 --
 -- Indexes for dumped tables
@@ -184,7 +184,7 @@ ALTER TABLE `customers`
 -- AUTO_INCREMENT for table `items`
 --
 ALTER TABLE `items`
-  MODIFY `item_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=24;
+  MODIFY `item_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
 
 --
 -- Constraints for dumped tables

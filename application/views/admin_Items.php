@@ -95,7 +95,7 @@
           <td> <?= $items->category ?></td>
           <td> ₹<?= $items->price ?></td>
           <td>
-          <img src=" <?= base_url($items->image_path.'/'.$items->name.'.jpg')  ?>" alt="" border=3 height=100 width=100></img>
+          <img src=" <?= base_url($items->image_path)  ?>" alt="" border=3 height=100 width=100></img>
            </td>
           <td> <?= $items->rate ?><span class="fa fa-star checked"></td>
           <td> <?= $items->description?></td>
