@@ -11,15 +11,24 @@ class Add_model extends CI_Model
 
     public function add_item()
     {
+
+        $name=$this->input->post('name');
+        $category=$this->input->post('category');
+        $price=$this->input->post('price');
+        $image_path=$this->input->post('image_path');
+        $rate=$this->input->post('rate');
+        $description=$this->input->post('description');
+
         $data = array(
-            'name' => 'My title',
-            'category'=>'Category',
-            'price' => 'My Name',
-            'rate' => 'My date',
-            'description' => 'My date'
+            'name' => $name,
+            'category'=>$category,
+            'price' => $price,
+            'image_path' => $image_path,
+            'rate' => $rate,
+            'description' => $description
         );
 
-        $this->db->insert('mytable', $data);
+        $this->db->insert('items', $data);
     }
 
     public function get_cat()

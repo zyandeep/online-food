@@ -11,21 +11,13 @@
 <body>
     <h3 style="text-align: center;">Add Items</h3>
 
-    <?php echo form_open_multipart('add_items/do_upload'); ?>
-<h4 >Upload Dish Image</h4>
-    <input type="file" name="userfile" size="200" />
-
-    <br /><br />
-
-    <input type="submit" value="Upload" />
-
-    </form>
-
-    <?= form_open(base_url("")); ?>
+    
+   
+    <?= form_open(base_url("add_items/add_item")); ?>
 
     <div class="form-group">
-        <label for="item_name"><span class="text-danger font-weight-bold">*</span> Item Name: </label><br>
-        <input type="text" name="item_name" required placeholder="Enter Item Name" value="" />
+        <label for="name"><span class="text-danger font-weight-bold">*</span> Item Name: </label><br>
+        <input type="text" name="name" required placeholder="Enter Item Name" value="" />
 
     </div>
 
@@ -48,13 +40,17 @@
 
     </div>
 
-   
+    <div class="form-group">
+        <label for="image_path"><span class="text-danger font-weight-bold"></span></label><br>
+        <input type="hidden" name="image_path" required placeholder="" value="<?=$image_path?>" />
+
+    </div>
 
     
 
     <div class="form-group">
         <label for="rate"><span class="text-danger font-weight-bold">*</span> Rating: </label><br>
-        <input type="text" value="" name="ratee" required placeholder="Enter rating between 1 to 5" />
+        <input type="text" value="" name="rate" required placeholder="Enter rating between 1 to 5" />
 
     </div>
 
@@ -71,7 +67,7 @@
     <a class="btn btn-outline-secondary" href="<?= base_url('admin_dashboard') ?>" role="button">Cancel</a>
     </form>
 
-
+    <!?=pre($q1)?>
 </body>
 
 </html>
