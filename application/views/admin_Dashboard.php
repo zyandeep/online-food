@@ -29,8 +29,8 @@
     }
 
     .row {
-      margin-left: -5px;
-      margin-right: -5px;
+      margin-left: 50px;
+      margin-right: 50px;
     }
 
     .column {
