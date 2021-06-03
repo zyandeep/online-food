@@ -82,10 +82,11 @@
         <thead>
           <tr>
             <th>Bill ID</th>
-            <th>Bill Status <h6 style="color:red">(Click to edit the status)</h6></th>
+            <th>Bill Status </th>
             <th>Bill Date</th>
             <th>Total Bill Amount</th>
             <th>Bill Summary</th>
+            <th>Action <h6 style="color:red">(Select next status)</h6></th>
 
           <tr>
         </thead>
@@ -95,7 +96,7 @@
 
             <tr>
               <td><?= $q->bill_id ?></td>
-              <td contenteditable='true' style="color:blue;"><?= $q->status ?></td>
+              <td style="color:blue;"><?= $q->status ?></td>
               <td><?= $q->bill_date ?></td>
               <td>₹<?= $q->bill_amount ?></td>
               <td>
@@ -137,8 +138,15 @@
                 </template>
 
                 <button>View</button>
-                <button>Change Status</button>
+               
               </td>
+              <td> <select>        
+                        <option value="volvo">NEW</option>
+                        <option value="saab">APPROVED</option>
+                        <option value="mercedes">DELIVERED</option>
+                        <option value="audi">CANCEL</option>
+                   </select>
+            <button>Change</button></td>
             </tr>
           <?php endforeach; ?>
         </tbody>
