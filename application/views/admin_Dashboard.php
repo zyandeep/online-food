@@ -95,7 +95,7 @@
 
             <tr>
               <td><?= $q->bill_id ?></td>
-              <td contenteditable='true'><?= $q->status ?></td>
+              <td contenteditable='true' style="color:blue;"><?= $q->status ?></td>
               <td><?= $q->bill_date ?></td>
               <td>₹<?= $q->bill_amount ?></td>
               <td>
