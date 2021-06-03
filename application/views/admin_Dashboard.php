@@ -29,8 +29,8 @@
     }
 
     .row {
-      margin-left: -5px;
-      margin-right: -5px;
+      margin-left: 50px;
+      margin-right: 50px;
     }
 
     .column {
@@ -82,10 +82,11 @@
         <thead>
           <tr>
             <th>Bill ID</th>
-            <th>Bill Status</th>
+            <th>Bill Status </th>
             <th>Bill Date</th>
             <th>Total Bill Amount</th>
             <th>Bill Summary</th>
+            <th>Action <h6 style="color:red">(Select next status)</h6></th>
 
           <tr>
         </thead>
@@ -95,7 +96,7 @@
 
             <tr>
               <td><?= $q->bill_id ?></td>
-              <td><?= $q->status ?></td>
+              <td style="color:blue;"><?= $q->status ?></td>
               <td><?= $q->bill_date ?></td>
               <td>₹<?= $q->bill_amount ?></td>
               <td>
@@ -137,7 +138,16 @@
                 </template>
 
                 <button>View</button>
+               
               </td>
+              <td> <select>
+                        <option value="0">SELECT</option>        
+                        <option value="1">NEW</option>
+                        <option value="2">APPROVED</option>
+                        <option value="3">DELIVERED</option>
+                        <option value="4">CANCEL</option>
+                   </select>
+            <button>Change</button></td>
             </tr>
           <?php endforeach; ?>
         </tbody>
