@@ -82,7 +82,7 @@
         <thead>
           <tr>
             <th>Bill ID</th>
-            <th>Bill Status (click to edit)</th>
+            <th>Bill Status <h6 style="color:red">(Click to edit the status)</h6></th>
             <th>Bill Date</th>
             <th>Total Bill Amount</th>
             <th>Bill Summary</th>
