@@ -24,6 +24,13 @@
       
     </ul>
     <ul class="nav navbar-nav navbar-right">
+    <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#"> Add <span class="caret"></span></a>
+        <ul class="dropdown-menu">
+          
+          <li><a href="<?= base_url('add_Items')?>">Items</a></li>
+        
+        </ul>
+      </li>
       <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#"> View <span class="caret"></span></a>
         <ul class="dropdown-menu">
           <li><a href="<?= base_url('admin_Customers')?>">Customers</a></li>

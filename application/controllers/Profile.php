@@ -84,23 +84,13 @@ class Profile extends CI_Controller
 			$data['history'] =  $querys;
 		}
 		
-		// pre($data['history']);
-
 
 		foreach ($querys as $q) :
-			
-			// array_push($data['bill'], json_decode($q->bill_summary, true)) ;
 
 			$q->bill_summary = json_decode($q->bill_summary, true) ;
-			
 
-			
-			//pre($q);
 		 endforeach;
-		//pre($query3);
-
-
-		//pre($data);
+	
 		
 
 		$this->load->view('includes/header');

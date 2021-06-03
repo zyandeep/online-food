@@ -15,4 +15,15 @@ class Dashboard_model extends CI_Model {
     	$query = $this->db->get();
         return $query->result();
     }
+
+    public function get_history()
+    {
+        $this->db->select("*");
+        $this->db->from('bills');
+
+        $this->db->order_by('bill_id', 'DESC');
+
+        $query = $this->db->get();
+        return $query->result();
+    }
 }
