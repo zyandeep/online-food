@@ -140,11 +140,12 @@
                 <button>View</button>
                
               </td>
-              <td> <select>        
-                        <option value="volvo">NEW</option>
-                        <option value="saab">APPROVED</option>
-                        <option value="mercedes">DELIVERED</option>
-                        <option value="audi">CANCEL</option>
+              <td> <select>
+                        <option value="0">SELECT</option>        
+                        <option value="1">NEW</option>
+                        <option value="2">APPROVED</option>
+                        <option value="3">DELIVERED</option>
+                        <option value="4">CANCEL</option>
                    </select>
             <button>Change</button></td>
             </tr>
