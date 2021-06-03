@@ -82,7 +82,7 @@
         <thead>
           <tr>
             <th>Bill ID</th>
-            <th>Bill Status</th>
+            <th>Bill Status (click to edit)</th>
             <th>Bill Date</th>
             <th>Total Bill Amount</th>
             <th>Bill Summary</th>
@@ -95,7 +95,7 @@
 
             <tr>
               <td><?= $q->bill_id ?></td>
-              <td><?= $q->status ?></td>
+              <td contenteditable='true'><?= $q->status ?></td>
               <td><?= $q->bill_date ?></td>
               <td>₹<?= $q->bill_amount ?></td>
               <td>
@@ -137,6 +137,7 @@
                 </template>
 
                 <button>View</button>
+                <button>Change Status</button>
               </td>
             </tr>
           <?php endforeach; ?>
