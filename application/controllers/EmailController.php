@@ -14,14 +14,17 @@ class EmailController extends CI_Controller {
         $this->load->view('email/contact');
     }
 
-    function send() {
+    public function send_email($to,$bill_id) {
         $this->load->config('email');
         $this->load->library('email');
         
         $from = $this->config->item('smtp_user');
-        $to = $this->input->post('to');
-        $subject = $this->input->post('subject');
-        $message = $this->input->post('message');
+        //$to = $this->input->post('to');
+        //$subject = $this->input->post('subject');
+        //$message = $this->input->post('message');
+        $subject = "Order Status for Bill id";
+        $message = "Your Order is approved and will be deliverd soon";
+        
 
         $this->email->set_newline("\r\n");
         $this->email->from($from);
