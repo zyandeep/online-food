@@ -141,8 +141,8 @@
               </td>
               <td> 
             <a href='<?= base_url(); ?>admin_dashboard/update_status/<?= $q->bill_id ?>/APPROVED'>APPROVE / </a>
-            <a href='<?= base_url(); ?>admin_dashboard/update_status/<?= $q->bill_id ?>/DELIVERED'>DELIVER -></a>
-            <a href='<?= base_url(); ?>admin_dashboard/update_status/<?= $q->bill_id ?>/CANCELED'>CANCEL</a></td>
+            <a href='<?= base_url(); ?>admin_dashboard/update_status/<?= $q->bill_id ?>/CANCELED'>CANCEL -></a>
+            <a href='<?= base_url(); ?>admin_dashboard/update_status/<?= $q->bill_id ?>/DELIVERED'>DELIVER</a></td>
             </tr>
           <?php endforeach; ?>
         </tbody>
