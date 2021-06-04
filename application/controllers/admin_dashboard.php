@@ -78,7 +78,9 @@ class admin_dashboard extends CI_Controller
 
         $this->load->model('Dashboard_model');
         $data['customer'] = $this->Dashboard_model->get_user($customer_id);
-        //pre($data['customer']);
+        $data['email']=$data['customer'][0];
+
+        
         //foreach ($data['customer'] as $cust) :
            //$cust->email;
         //endforeach;
@@ -91,7 +93,7 @@ class admin_dashboard extends CI_Controller
 
         $this->email->set_newline("\r\n");
         $this->email->from($from);
-        $this->email->to("mravik07@gmail.com");
+        $this->email->to($data['email']->email);
         $this->email->subject($subject);
         $this->email->message($message);
 
