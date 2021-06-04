@@ -70,23 +70,24 @@
       margin-right: auto;
     }
   </style>
+
 </head>
 
 <body>
 
   <div class="row">
-
+    <h3 style="color:green">List of Orders</h3>
     <div class="column">
       <table id="history" class="table table-striped table-bordered" style="width:100%">
 
         <thead>
           <tr>
             <th>Bill ID</th>
-            <th>Bill Status </th>
+            <th>Bill Status <h6 style="color:red">(Current Status) </h6></th>
             <th>Bill Date</th>
             <th>Total Bill Amount</th>
             <th>Bill Summary</th>
-            <th>Action <h6 style="color:red">(Select next status)</h6></th>
+            <th>Action <h6 style="color:red">(Select next status in the workflow)</h6></th>
 
           <tr>
         </thead>
@@ -95,7 +96,7 @@
           <?php foreach ($history as $q) : ?>
 
             <tr>
-              <td><?= $q->bill_id ?></td>
+              <td id="bill_id"><?= $q->bill_id ?></td>
               <td style="color:blue;"><?= $q->status ?></td>
               <td><?= $q->bill_date ?></td>
               <td>₹<?= $q->bill_amount ?></td>
@@ -127,8 +128,6 @@
                             <td> <?= $order['item_quantity'] ?></td>
                             <td> <?= $order['item_price'] ?></td>
                             <td> <?= $order['item_total'] ?></td>
-
-
                           </tr>
 
                         <?php endforeach; ?>
@@ -140,14 +139,10 @@
                 <button>View</button>
                
               </td>
-              <td> <select>
-                        <option value="0">SELECT</option>        
-                        <option value="1">NEW</option>
-                        <option value="2">APPROVED</option>
-                        <option value="3">DELIVERED</option>
-                        <option value="4">CANCEL</option>
-                   </select>
-            <button>Change</button></td>
+              <td> 
+            <a href='<?= base_url(); ?>admin_dashboard/update_status/<?= $q->bill_id ?>/APPROVED'>APPROVE -></a>
+            <a href='<?= base_url(); ?>admin_dashboard/update_status/<?= $q->bill_id ?>/DELIVERED'>DELIVER -></a>
+            <a href='<?= base_url(); ?>admin_dashboard/update_status/<?= $q->bill_id ?>/CANCELED'>CANCEL</a></td>
             </tr>
           <?php endforeach; ?>
         </tbody>

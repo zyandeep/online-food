@@ -28,8 +28,5 @@ class Update extends CI_Controller {
      public function update_action()
      {
         $this->load->model('update_model');
-
-        
-
      }
 }
