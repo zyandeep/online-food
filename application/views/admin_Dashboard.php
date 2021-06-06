@@ -88,7 +88,7 @@
             <th>Bill Date</th>
             <th>Total Bill Amount</th>
             <th>Bill Summary</th>
-            <th>Action <h6 style="color:red">(Select next status in the workflow)</h6></th>
+            <th>Action <h6 style="color:red">(Select next status in the workflow and send email notification )</h6></th>
 
           <tr>
         </thead>
@@ -142,10 +142,10 @@
                
               </td>
               <td> 
-            <a href='<?= base_url(); ?>admin_dashboard/update_status/<?= $q->bill_id ?>/APPROVED'>APPROVE / </a>
-            <a href='<?= base_url(); ?>admin_dashboard/update_status/<?= $q->bill_id ?>/CANCELED'>CANCEL -></a>
-            <a href='<?= base_url(); ?>admin_dashboard/update_status/<?= $q->bill_id ?>/DELIVERED'>DELIVER</a>
-            <a href='<?= base_url(); ?>admin_dashboard/send_email/<?= $q->customer_id ?>/<?= $q->bill_id ?>'>SEND </a></td>
+            <a href='<?= base_url(); ?>admin_dashboard/update_status/<?= $q->bill_id ?>/APPROVED/<?= $q->customer_id ?>'>APPROVE / </a>
+            <a href='<?= base_url(); ?>admin_dashboard/update_status/<?= $q->bill_id ?>/CANCELED/<?= $q->customer_id ?>'>CANCEL -></a>
+            <a href='<?= base_url(); ?>admin_dashboard/update_status/<?= $q->bill_id ?>/DELIVERED/<?= $q->customer_id ?>'>DELIVER</a>
+            
 
             </tr>
           <?php endforeach; ?>
