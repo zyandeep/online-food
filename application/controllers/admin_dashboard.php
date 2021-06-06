@@ -80,10 +80,6 @@ class admin_dashboard extends CI_Controller
         $data['customer'] = $this->Dashboard_model->get_user($customer_id);
         $data['email']=$data['customer'][0];
 
-        
-        //foreach ($data['customer'] as $cust) :
-           //$cust->email;
-        //endforeach;
 
 
         $from = $this->config->item('smtp_user');

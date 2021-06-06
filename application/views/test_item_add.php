@@ -6,6 +6,22 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Add Item</title>
+
+    <style>
+        body {
+            background-image: url(<?= base_url('assets/img/food/photo-1540189549336-e6e99c3679fe.jpg') ?>);
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        form {
+            margin: 0 auto;
+            width: 250px;
+        }
+        label{
+            color: yellowgreen;
+            font-size: 2rem;
+        }
+    </style>
 </head>
 
 <body>
@@ -27,10 +43,10 @@
         </div>
 
         <select name="category" id="category">
-           
-           <option value="veg">VEG</option>
-           <option value="nonveg">NON-VEG</option>
-           <option value="beverage">BEVERAGE</option>
+
+            <option value="veg">VEG</option>
+            <option value="nonveg">NON-VEG</option>
+            <option value="beverage">BEVERAGE</option>
 
 
 

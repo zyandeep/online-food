@@ -46,12 +46,12 @@ class Cart extends CI_Controller
 		}, 0);
 
 
-		$bill_html = '<table><caption>Foodpark Bill Receipt</caption>' . 
-		'<thead><tr>  <th>Item Name</th>
-		<th>Item Description</th>
-		<th>Quantity</th>
-		<th>Price</th>
-		<th>Total</th> </tr></thead><tbody>';  
+		$bill_html = '<table border="1" width="500"><caption><h2>Foodpark Bill Receipt</h2></caption>' . 
+		'<thead><tr>  <th width="25%">Item Name</th>
+		<th width="45%">Item Description</th>
+		<th width="10%">Quantity</th>
+		<th width="10%">Price</th>
+		<th width="10%">Total</th> </tr></thead><tbody>';  
 
 		foreach ($orders  as $order) {
 
